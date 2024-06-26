@@ -1,19 +1,8 @@
 import React from "react";
-import ListTasks from "./ListTasks";
+import '../style-sheet/Button.css'
 
-function ButtonAll(props){
-    const typeButton = props.type === "pending" ? () => {
-        return (
-            <div>
-                div de boton pendiente
-            </div>)
-    } : "si"
-    console.log(ListTasks.tasks)
+export function Button({text, onClick}) {
     return (
-        <div>
-            <button type=""></button>
-        </div>
-    )
+        <button className="button-filter" onClick={onClick}>{text}</button>
+    );
 }
-
-export default ButtonAll;
